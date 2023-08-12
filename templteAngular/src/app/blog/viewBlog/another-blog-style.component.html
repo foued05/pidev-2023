@@ -1,0 +1,18 @@
+<article style="margin-top: 124px;">
+    <!-- Post header-->
+    <header class="mb-4">
+        <!-- Post title-->
+        <h1 class="fw-bolder mb-1">{{ article[0]?.articleTitle }}</h1>
+        <!-- Post meta content-->
+        <div class="text-muted fst-italic mb-2">Posted on {{ article[0]?.creationDate }} by {{ article[0]?.createdBy }}</div>
+        <!-- Post categories-->
+        <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+        <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
+    </header>
+    <!-- Preview image figure-->
+
+    <!-- Post content-->
+    <section class="mb-5">
+        <p class="fs-5 mb-4">{{ article[0]?.articleText }}</p>
+    </section>
+</article>

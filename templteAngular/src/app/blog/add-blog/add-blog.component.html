@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form (ngSubmit)="addArticle(articleForm)" #articleForm="ngForm" role="form">
+
+        <div class="form-group">
+          <input type="text" class="form-control" name="articleTitle" placeholder="Title" [(ngModel)]="article.articleTitle" required>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="articleText" [(ngModel)]="article.articleText" required></textarea>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="isPrivate" [(ngModel)]="article.isPrivate">
+          <label class="form-check-label">Private</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="isArchived" [(ngModel)]="article.isArchived">
+          <label class="form-check-label">Archived</label>
+        </div>
+        <div class="form-group">
+           <input type="submit" name="Submit" value="Publish" class="btn btn-primary form-control" [disabled]="!articleForm.valid" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

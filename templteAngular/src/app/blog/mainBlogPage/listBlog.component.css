@@ -1,0 +1,12 @@
+
+.container mt-5{
+  margin-top: 126px !important;
+}
+.mt-5 {
+  margin-top: 10rem !important;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}

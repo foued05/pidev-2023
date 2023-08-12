@@ -1,0 +1,24 @@
+<div class="fixed-element" *ngIf="mode == 'mode connection'">
+    <div class="chat-container" *ngIf="bullStatus">
+        <span class="close-icon" (click)="closeBull()"></span>
+        <div class="chat-messages">
+          <div *ngFor="let message of messages" class="message">
+            <span class="message-sender">{{ message.sender }}</span>
+            <span class="message-content">{{ message.content }}</span>
+          </div>
+        </div>
+        <div class="chat-input">
+          <input type="text" [(ngModel)]="newMessage" placeholder="Type a message..." />
+          <button (click)="sendMessage()">Send</button>
+        </div>
+    </div>
+    <div class="messaging-container margin-bull" *ngIf="!bullStatus" (click)="openBull()">
+        <div class="circle">
+          <div class="circle-inner">
+            <span class="message-count">{{ messageCount }}</span>
+            <span class="message-text">New Messages</span>
+          </div>
+        </div>
+      </div>
+      
+</div>

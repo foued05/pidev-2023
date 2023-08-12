@@ -1,0 +1,42 @@
+<div class="section section-buttons">
+    <div class="container">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>
+                        username
+                    </th>
+                    <th>
+                        email
+                    </th>
+                    <th>
+                        Creation Date
+                    </th>
+                    <th>
+                        Approved
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>
+                        {{user.userName}}
+                    </td>
+                    <td>
+                        {{user.email}}
+                    </td>
+                    <td>
+                        {{user.creationDate | date}}
+                    </td>
+                    <td>
+                        <div *ngIf="!user.improved">
+                            <button type="button"
+                            (click)="improveUser(user._id)"
+                            class="btn btn-success btn-round">Improve</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
